@@ -1,0 +1,1058 @@
+{
+    "list": [
+        {
+            "ascii": {
+                "index": [
+                    370,
+                    371,
+                    373,
+                    374,
+                    375
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "",
+                        1668453492164,
+                        "first change"
+                    ],
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "0.5*10^-4*23*10�",
+                        1668453534677,
+                        "submit"
+                    ],
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "0.5*(10^-4)*23*10�",
+                        1668453545543,
+                        "submit"
+                    ],
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "0.5*(10^-4)*23*10�",
+                        1668453547252,
+                        "submit"
+                    ],
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "0.5*(10^-4)*23*10�",
+                        1668453548309,
+                        "submit"
+                    ]
+                ]
+            },
+            "mathquill": {
+                "index": [
+                    310,
+                    313,
+                    316,
+                    317,
+                    319,
+                    320,
+                    321,
+                    322
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "o",
+                        1668453243846,
+                        "first change"
+                    ],
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "0.5",
+                        1668453252305,
+                        "*"
+                    ],
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "0.5\\cdot10",
+                        1668453262019,
+                        "^"
+                    ],
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "0.5\\cdot10^{-4}",
+                        1668453277157,
+                        "*"
+                    ],
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "0.5\\cdot10^{-4}\\cdot23",
+                        1668453281202,
+                        "*"
+                    ],
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10",
+                        1668453286933,
+                        "^"
+                    ],
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        1668453290222,
+                        "submit"
+                    ],
+                    [
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        "0.5\\cdot10^{-4}\\cdot23\\cdot10^2",
+                        1668453291188,
+                        "submit"
+                    ]
+                ]
+            }
+        },
+        {
+            "ascii": {
+                "index": [
+                    285,
+                    294,
+                    303,
+                    304,
+                    305
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        "",
+                        1668453179800,
+                        "first change"
+                    ],
+                    [
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        "1/raiz(a)+raiz(b)",
+                        1668453213026,
+                        "submit"
+                    ],
+                    [
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        "1/(raiz(a)+raiz(b))",
+                        1668453226253,
+                        "submit"
+                    ],
+                    [
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        "1/(raiz(a)+raiz(b))",
+                        1668453227660,
+                        "submit"
+                    ],
+                    [
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        "1/(raiz(a)+raiz(b))",
+                        1668453228954,
+                        "submit"
+                    ]
+                ]
+            },
+            "mathquill": {
+                "index": [
+                    353,
+                    354,
+                    355,
+                    357,
+                    358,
+                    360,
+                    364
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        "\\frac{ }{ }",
+                        1668453456844,
+                        "first change"
+                    ],
+                    [
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        "",
+                        1668453456845,
+                        "\\frac"
+                    ],
+                    [
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        "",
+                        1668453462671,
+                        "\\frac"
+                    ],
+                    [
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        "\\frac{1}{ }",
+                        1668453467191,
+                        "\\sqrt"
+                    ],
+                    [
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        "\\frac{1}{\\sqrt{a}+}",
+                        1668453476782,
+                        "\\sqrt"
+                    ],
+                    [
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        1668453481128,
+                        "submit"
+                    ],
+                    [
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        "\\frac{1}{\\sqrt{a}+\\sqrt{b}}",
+                        1668453482713,
+                        "submit"
+                    ]
+                ]
+            }
+        },
+        {
+            "ascii": {
+                "index": [
+                    335,
+                    345,
+                    350,
+                    351
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "",
+                        1668453341206,
+                        "first change"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "(a^2+b^2)/(C^a+b)",
+                        1668453407269,
+                        "submit"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "((a^2)+(b^2))/((C^a+b))",
+                        1668453442763,
+                        "submit"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "((a^2)+(b^2))/((C^a+b))",
+                        1668453444766,
+                        "submit"
+                    ]
+                ]
+            },
+            "mathquill": {
+                "index": [
+                    232,
+                    233,
+                    235,
+                    239,
+                    244,
+                    255,
+                    261,
+                    264,
+                    268,
+                    270,
+                    277,
+                    280,
+                    281
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "",
+                        1668453078644,
+                        "\\frac"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "\\frac{ }{ }",
+                        1668453078680,
+                        "first change"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "a",
+                        1668453093707,
+                        "^"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "a^2",
+                        1668453098320,
+                        "+"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "a^2+b",
+                        1668453108483,
+                        "^"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "a^2+b^2",
+                        1668453114465,
+                        "\\frac"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "a^2+b^2",
+                        1668453119486,
+                        "\\frac"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "",
+                        1668453126418,
+                        "\\frac"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "\\frac{a}{ }",
+                        1668453131175,
+                        "^"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "\\frac{a^2+b}{ }",
+                        1668453139298,
+                        "^"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "\\frac{a^2+b^2}{c}",
+                        1668453149837,
+                        "^"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        1668453167123,
+                        "submit"
+                    ],
+                    [
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        "\\frac{a^2+b^2}{c^{a+b}}",
+                        1668453168456,
+                        "submit"
+                    ]
+                ]
+            }
+        },
+        {
+            "ascii": {
+                "index": [
+                    63,
+                    66,
+                    67
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\frac{a}{b}",
+                        "",
+                        1668452540978,
+                        "first change"
+                    ],
+                    [
+                        "\\frac{a}{b}",
+                        "a/b",
+                        1668452549596,
+                        "submit"
+                    ],
+                    [
+                        "\\frac{a}{b}",
+                        "a/b",
+                        1668452550498,
+                        "submit"
+                    ]
+                ]
+            },
+            "mathquill": {
+                "index": [
+                    27,
+                    30,
+                    31
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\frac{a}{b}",
+                        "a",
+                        1668452415548,
+                        "first change"
+                    ],
+                    [
+                        "\\frac{a}{b}",
+                        "\\frac{a}{b}",
+                        1668452421092,
+                        "submit"
+                    ],
+                    [
+                        "\\frac{a}{b}",
+                        "\\frac{a}{b}",
+                        1668452422106,
+                        "submit"
+                    ]
+                ]
+            }
+        },
+        {
+            "ascii": {
+                "index": [
+                    175,
+                    179,
+                    181
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\frac{c}{a+b}",
+                        "",
+                        1668452900482,
+                        "first change"
+                    ],
+                    [
+                        "\\frac{c}{a+b}",
+                        "c/a+b",
+                        1668452913192,
+                        "submit"
+                    ],
+                    [
+                        "\\frac{c}{a+b}",
+                        "c/a+b",
+                        1668452913931,
+                        "submit"
+                    ]
+                ]
+            },
+            "mathquill": {
+                "index": [
+                    103,
+                    105,
+                    106
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\frac{c}{a+b}",
+                        "c",
+                        1668452635958,
+                        "first change"
+                    ],
+                    [
+                        "\\frac{c}{a+b}",
+                        "\\frac{c}{a+b}",
+                        1668452643608,
+                        "submit"
+                    ],
+                    [
+                        "\\frac{c}{a+b}",
+                        "\\frac{c}{a+b}",
+                        1668452645403,
+                        "submit"
+                    ]
+                ]
+            }
+        },
+        {
+            "ascii": {
+                "index": [
+                    92,
+                    98,
+                    100
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\left(a+b\\right)\\cdot c",
+                        "",
+                        1668452608797,
+                        "first change"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot c",
+                        "(a+b)*c",
+                        1668452622597,
+                        "submit"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot c",
+                        "(a+b)*c",
+                        1668452623390,
+                        "submit"
+                    ]
+                ]
+            },
+            "mathquill": {
+                "index": [
+                    163,
+                    164,
+                    168,
+                    170,
+                    171,
+                    172
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\left(a+b\\right)\\cdot c",
+                        "",
+                        1668452878400,
+                        "("
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot c",
+                        "\\left(\\right)",
+                        1668452878424,
+                        "first change"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot c",
+                        "\\left(a\\right)",
+                        1668452881230,
+                        "+"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot c",
+                        "\\left(a+b\\right)",
+                        1668452884801,
+                        ")"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot c",
+                        "\\left(a+b\\right)",
+                        1668452886076,
+                        "*"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot c",
+                        "\\left(a+b\\right)\\cdot c",
+                        1668452889069,
+                        "submit"
+                    ]
+                ]
+            }
+        },
+        {
+            "ascii": {
+                "index": [
+                    211,
+                    223,
+                    226,
+                    227
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",
+                        "",
+                        1668452989813,
+                        "first change"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",
+                        "(a+b)*(a^2*b-a)",
+                        1668453033676,
+                        "submit"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",
+                        "(a+b)*((a^2*b)-a)",
+                        1668453063234,
+                        "submit"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",
+                        "(a+b)*((a^2*b)-a)",
+                        1668453064338,
+                        "submit"
+                    ]
+                ]
+            },
+            "mathquill": {
+                "index": [
+                    324,
+                    328,
+                    330,
+                    331,
+                    333,
+                    334
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",
+                        "\\left(\\right)",
+                        1668453300110,
+                        "first change"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",
+                        "\\left(a+b\\right)",
+                        1668453307251,
+                        "*"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",
+                        "\\left(a+b\\right)\\cdot\\left(a\\right)",
+                        1668453311971,
+                        "^"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",
+                        "\\left(a+b\\right)\\cdot\\left(a^2\\right)",
+                        1668453316785,
+                        "*"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",
+                        "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",
+                        1668453331069,
+                        "submit"
+                    ],
+                    [
+                        "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",
+                        "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",
+                        1668453331937,
+                        "submit"
+                    ]
+                ]
+            }
+        },
+        {
+            "ascii": {
+                "index": [
+                    109,
+                    112,
+                    113
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\left(a+b\\right)^c",
+                        "",
+                        1668452654870,
+                        "first change"
+                    ],
+                    [
+                        "\\left(a+b\\right)^c",
+                        "(a+b)^c",
+                        1668452688742,
+                        "submit"
+                    ],
+                    [
+                        "\\left(a+b\\right)^c",
+                        "(a+b)^c",
+                        1668452690084,
+                        "submit"
+                    ]
+                ]
+            },
+            "mathquill": {
+                "index": [
+                    185,
+                    191,
+                    192,
+                    193
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\left(a+b\\right)^c",
+                        "\\left(\\right)",
+                        1668452929027,
+                        "first change"
+                    ],
+                    [
+                        "\\left(a+b\\right)^c",
+                        "\\left(a+b\\right)",
+                        1668452939955,
+                        "^"
+                    ],
+                    [
+                        "\\left(a+b\\right)^c",
+                        "\\left(a+b\\right)^c",
+                        1668452942620,
+                        "submit"
+                    ],
+                    [
+                        "\\left(a+b\\right)^c",
+                        "\\left(a+b\\right)^c",
+                        1668452943539,
+                        "submit"
+                    ]
+                ]
+            }
+        },
+        {
+            "ascii": {
+                "index": [
+                    199,
+                    201,
+                    207,
+                    208
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\sqrt{a}",
+                        "",
+                        1668452960003,
+                        "first change"
+                    ],
+                    [
+                        "\\sqrt{a}",
+                        "raiz(b)",
+                        1668452966143,
+                        "submit"
+                    ],
+                    [
+                        "\\sqrt{a}",
+                        "raiz(a)",
+                        1668452974464,
+                        "submit"
+                    ],
+                    [
+                        "\\sqrt{a}",
+                        "raiz(a)",
+                        1668452975388,
+                        "submit"
+                    ]
+                ]
+            },
+            "mathquill": {
+                "index": [
+                    114,
+                    153,
+                    155,
+                    159
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "\\sqrt{a}",
+                        "a",
+                        1668452713090,
+                        "first change"
+                    ],
+                    [
+                        "\\sqrt{a}",
+                        "",
+                        1668452856448,
+                        "\\sqrt"
+                    ],
+                    [
+                        "\\sqrt{a}",
+                        "\\sqrt{a}",
+                        1668452858369,
+                        "submit"
+                    ],
+                    [
+                        "\\sqrt{a}",
+                        "\\sqrt{a}",
+                        1668452860281,
+                        "submit"
+                    ]
+                ]
+            }
+        },
+        {
+            "ascii": {
+                "index": [
+                    14,
+                    17,
+                    18
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "a+b",
+                        "",
+                        1668452380778,
+                        "first change"
+                    ],
+                    [
+                        "a+b",
+                        "a+b",
+                        1668452389669,
+                        "submit"
+                    ],
+                    [
+                        "a+b",
+                        "a+b",
+                        1668452391632,
+                        "submit"
+                    ]
+                ]
+            },
+            "mathquill": {
+                "index": [
+                    55,
+                    57,
+                    58
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "a+b",
+                        "a",
+                        1668452523795,
+                        "first change"
+                    ],
+                    [
+                        "a+b",
+                        "a+b",
+                        1668452528063,
+                        "submit"
+                    ],
+                    [
+                        "a+b",
+                        "a+b",
+                        1668452529059,
+                        "submit"
+                    ]
+                ]
+            }
+        },
+        {
+            "ascii": {
+                "index": [
+                    36,
+                    37,
+                    38
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "a\\cdot b",
+                        "",
+                        1668452435408,
+                        "first change"
+                    ],
+                    [
+                        "a\\cdot b",
+                        "a*b",
+                        1668452442408,
+                        "submit"
+                    ],
+                    [
+                        "a\\cdot b",
+                        "a*b",
+                        1668452443521,
+                        "submit"
+                    ]
+                ]
+            },
+            "mathquill": {
+                "index": [
+                    71,
+                    72,
+                    73
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "a\\cdot b",
+                        "a",
+                        1668452559250,
+                        "first change"
+                    ],
+                    [
+                        "a\\cdot b",
+                        "a\\cdot b",
+                        1668452562657,
+                        "submit"
+                    ],
+                    [
+                        "a\\cdot b",
+                        "a\\cdot b",
+                        1668452564205,
+                        "submit"
+                    ]
+                ]
+            }
+        },
+        {
+            "ascii": {
+                "index": [
+                    77,
+                    87,
+                    88
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "a^b",
+                        "",
+                        1668452574065,
+                        "first change"
+                    ],
+                    [
+                        "a^b",
+                        "a^b",
+                        1668452597068,
+                        "submit"
+                    ],
+                    [
+                        "a^b",
+                        "a^b",
+                        1668452598103,
+                        "submit"
+                    ]
+                ]
+            },
+            "mathquill": {
+                "index": [
+                    42,
+                    50,
+                    51
+                ],
+                "columns": [
+                    "expression",
+                    "expstep",
+                    "createdAt",
+                    "value"
+                ],
+                "data": [
+                    [
+                        "a^b",
+                        "a",
+                        1668452462097,
+                        "first change"
+                    ],
+                    [
+                        "a^b",
+                        "a^b",
+                        1668452513269,
+                        "submit"
+                    ],
+                    [
+                        "a^b",
+                        "a^b",
+                        1668452514148,
+                        "submit"
+                    ]
+                ]
+            }
+        }
+    ]
+}

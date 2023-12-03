@@ -1,0 +1,18 @@
+{
+    "caption":"Ingreso de respuesta final por expresion usuario 395",
+    "datos":[
+        ["Expresion original",	"Ingreso ASCII",	"Ingreso Mathquill"],
+        ["0.5\\cdot10^{-4}\\cdot23\\cdot10^2",	"0.5*10^-4 *23*10^2",	"0.5\\cdot10^{-4}\\cdot10^2\\cdot23"],
+        ["\\frac{1}{\\sqrt{a}+\\sqrt{b}}",	"1/raiz(b)-raiz(a)",	"\\frac{1}{\\sqrt{b}+\\sqrt{c}}"],
+        ["\\frac{a^2+b^2}{c^{a+b}}",	"a^2+b^2/c^b+c",	"\\frac{a^2+b^2}{c^{a+b}}=110"],
+        ["\\frac{a}{b}",	"a-b=943943",	"\\frac{a}{b}"],
+        ["\\frac{c}{a+b}",	"a/b+c",	"\\frac{c}{a+b}"],
+        ["\\left(a+b\\right)\\cdot c",	"(a+b)*c",	"\\left(b-c\\right)^c"],
+        ["\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)",	"(a-b)*(a^2*a+a)",	"\\left(a-c\\right)\\left(a^{2b}-a\\right)"],
+        ["\\left(a+b\\right)^c",	"(b+c)^a",	"\\left(b+a\\right)^c"],
+        ["\\sqrt{a}",	"raiz(a)=0",	"\\sqrt{a}"],
+        ["a+b",	"a-b",	"a+b"],
+        ["a\\cdot b",	"a*b",	"\\frac{a}{9}=\\ 543243"],
+        ["a^b",	"a-b=448",	"a^b"]
+    ]
+}
