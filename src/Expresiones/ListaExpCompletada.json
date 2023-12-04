@@ -1,14 +1,14 @@
 {
-    "explist":[{"expid":"12","exp":"0.5\\cdot 10^{-4}\\cdot 23\\cdot 10^2","oplist":["decimal","multiplicacion","potencia","resta"]},
-    {"expid":"11","exp":"\\frac{1}{\\sqrt{a}+\\sqrt{b}}","oplist":["division","raiz"]},
-    {"expid":"10","exp":"\\frac{a^2+b^2}{c^{a+b}}","oplist":["potencia","division","suma"]},
-    {"expid":"9","exp":"\\frac{a}{b}","oplist":["division"]},
-    {"expid":"8","exp":"\\frac{c}{a+b}","oplist":["division","suma"]},
-    {"expid":"7","exp":"\\left(a+b\\right)\\cdot c","oplist":["parentesis","suma","multiplicacion"]},
-    {"expid":"6","exp":"\\left(a+b\\right)\\cdot \\left(a^{2\\cdot b}-a\\right)","oplist":["parentesis","suma","multiplicacion","potencia"]},
-    {"expid":"5","exp":"\\left(a+b\\right)^c","oplist":["parentesis","suma","multiplicacion"]},
-    {"expid":"4","exp":"\\sqrt{a}","oplist":["raiz"]},
-    {"expid":"3","exp":"a+b","oplist":["suma"]},
-    {"expid":"2","exp":"a\\cdot b","oplist":["multiplicacion"]},
-    {"expid":"1","exp":"a^b","oplist":["potencia"]}]
+    "0.5\\cdot10^{-4}\\cdot23\\cdot10^2":["12","decimales","multiplicacion","potencia","resta"],
+    "\\frac{1}{\\sqrt{a}+\\sqrt{b}}":["11","division","raiz"],
+    "\\frac{a^2+b^2}{c^{a+b}}":["10","potencia","division","suma"],
+    "\\frac{a}{b}":["9","division"],
+    "\\frac{c}{a+b}":["8","division","suma"],
+    "\\left(a+b\\right)\\cdot c":["7","parentesis","suma","multiplicacion"],
+    "\\left(a+b\\right)\\cdot\\left(a^{2\\cdot b}-a\\right)":["6","parentesis","suma","multiplicacion","potencia"],
+    "\\left(a+b\\right)^c":["5","parentesis","suma","multiplicacion"],
+    "\\sqrt{a}":["4","raiz"],
+    "a+b":["3","suma"],
+    "a\\cdot b":["2","multiplicacion"],
+    "a^b":["1","potencia"]
 }

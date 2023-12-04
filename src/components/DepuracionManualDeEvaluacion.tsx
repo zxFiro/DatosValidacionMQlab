@@ -12,10 +12,10 @@ import C402 from "../Expresiones/C402.json"
 import { useEffect, useRef, useState } from "react"
 
 import dynamic from "next/dynamic";
-import MQPostfixparser from "@/utils/MQPostfixparser"
 import MQPostfixSolver from "@/utils/MQPostfixSolver"
 import DMQPostfixparser from "@/utils/DMQPostfixparser"
 import MQPostfixstrict from "@/utils/MQPostfixstrict"
+import TransformacionFinalDatos from "./TransformacionFinalDatos"
 
 const StaticMath = dynamic(
     () => {
@@ -118,7 +118,7 @@ const validacion = (exp: Array<string> ) => {
     return [evaluacion1[0].toFixed(2), evaluacion2[0].toFixed(2), flag5, flag1, flag2, flag3, flag4,""+exp[0],""+exp[1]]
 }
 
-const procesarData = (datos: tablaEv,tipo:boolean ) => {
+const procesarData = (datos: tablaEv,tipo:boolean,uid:string) => {
     let tablerow = []
     for (let i = 0; i < datos.list.length; i++) {
         //filtro las filas que tengan valor first change o submit
@@ -163,12 +163,13 @@ const procesarData = (datos: tablaEv,tipo:boolean ) => {
         for(let j=0;j<val.length;j++)fila.push(""+val[j])
         tablerow.push(fila)
     }
+    TransformacionFinalDatos(tablerow,uid,((tipo)?"ASCII":"MQ2"))
     return tablerow
 }
-const TabladeEvaluacion = ({ datos, refresh }: { datos: tablaEv, refresh: boolean }) => {
+const TabladeEvaluacion = ({ datos, refresh, uid}: { datos: tablaEv, refresh: boolean , uid:string}) => {
     const poblartabla = (tipo:boolean) => {
         return (
-            procesarData(datos,tipo).map((m, i) => (
+            procesarData(datos,tipo,uid).map((m, i) => (
                 <Tr key={"ASCIIev" + i} >
                     <Td key={i + "ASCIIev" + "m8"} p={"3"}><StaticMath exp={m[7] as string} currentExpIndex={refresh} /></Td>
                     <Td key={i + "ASCIIev" + "m9"} p={"3"}>{(tipo)?m[8]:<StaticMath exp={m[8] as string} currentExpIndex={refresh} />}</Td>
@@ -210,6 +211,8 @@ const TabladeEvaluacion = ({ datos, refresh }: { datos: tablaEv, refresh: boolea
     )
 }
 
+
+
 const DepuracionManualDeEvaluacion = () => {
     const [update, setUpdate] = useState(true);
     return (
@@ -234,13 +237,13 @@ const DepuracionManualDeEvaluacion = () => {
                         <TabladeComparacion1 datos={input3} refresh={update} />
                     </TabPanel>
                     <TabPanel>
-                        <TabladeEvaluacion datos={A395} refresh={update} />
+                        <TabladeEvaluacion datos={A395} uid={"A395"} refresh={update} />
                     </TabPanel>
                     <TabPanel>
-                        <TabladeEvaluacion datos={D400} refresh={update} />
+                        <TabladeEvaluacion datos={D400} uid={"D400"} refresh={update} />
                     </TabPanel>
                     <TabPanel>
-                        <TabladeEvaluacion datos={C402} refresh={update} />
+                        <TabladeEvaluacion datos={C402} uid={"C402"}refresh={update} />
                     </TabPanel>
                 </TabPanels>
             </Tabs>
