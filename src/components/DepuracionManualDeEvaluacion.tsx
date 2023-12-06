@@ -1,20 +1,15 @@
-import { Center } from "@chakra-ui/react"
+import { Button, Center } from "@chakra-ui/react"
 import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableCaption, TableContainer, } from '@chakra-ui/react'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 import input1 from "../Expresiones/IngresoUsuario1.json"
 import input2 from "../Expresiones/IngresoUsuario2.json"
 import input3 from "../Expresiones/IngresoUsuario3.json"
-import A395 from "../Expresiones/A395.json"
-import D400 from "../Expresiones/D400.json"
-import C402 from "../Expresiones/C402.json"
 
 import { useEffect, useRef, useState } from "react"
 
 import dynamic from "next/dynamic";
-import MQPostfixSolver from "@/utils/MQPostfixSolver"
-import DMQPostfixparser from "@/utils/DMQPostfixparser"
-import MQPostfixstrict from "@/utils/MQPostfixstrict"
+import PValtio,{reset} from "@/utils/PValtio"
 import TransformacionFinalDatos from "./TransformacionFinalDatos"
 
 const StaticMath = dynamic(
@@ -69,107 +64,10 @@ const TabladeComparacion1 = ({datos,refresh}:{datos: tabla, refresh: boolean}) =
     )
 }
 
-interface tablapython {
-    index: Array<number>
-    columns: Array<string>
-    data: Array<Array<string | number>>
-}
-interface potato {
-    ascii: tablapython
-    mathquill: tablapython
-}
-interface tablaEv {
-    list: Array<potato>
-}
-
-const values = [
-    {
-        "name": "a",
-        "value": 1
-    },
-    {
-        "name": "b",
-        "value": 4
-    },
-    {
-        "name": "c",
-        "value": 1
-    }
-]
-const errorRelativo = (vals: Array<number>) => {
-    let relativeError = Math.abs(1 - (vals[0] / vals[1]));
-    return (relativeError < 0.005) ? 1 : 0;
-}
-
-//exp[0]:respuesta correcta, exp[1]:respuesta ingresada
-const validacion = (exp: Array<string> ) => {
-    let traduccion1 = DMQPostfixparser(""+exp[0]);
-    let traduccion2 = DMQPostfixparser(""+exp[1]);
-    let evaluacion1 = MQPostfixSolver(traduccion1, values);
-    let evaluacion2 = MQPostfixSolver(traduccion2, values);
-    let flag1 = 1;
-    let flag2 = 1;
-    let flag3 = errorRelativo([evaluacion1[0], evaluacion2[0]])
-    let flag4 = MQPostfixstrict(traduccion1, traduccion2);
-    let flag5 = (evaluacion1[0] == evaluacion2[0]) ?1:0
-    if (evaluacion1.length > 1) flag1 = 0;
-    if (evaluacion2.length > 1) flag2 = 0;
-    //evaluacion rc, ev rin, comp1, expincompleta1, expincompleta2,err,count
-    return [evaluacion1[0].toFixed(2), evaluacion2[0].toFixed(2), flag5, flag1, flag2, flag3, flag4,""+exp[0],""+exp[1]]
-}
-
-const procesarData = (datos: tablaEv,tipo:boolean,uid:string) => {
-    let tablerow = []
-    for (let i = 0; i < datos.list.length; i++) {
-        //filtro las filas que tengan valor first change o submit
-        let firstChange = 0;
-        let subvals:Array<Array<string>>=[];
-        let e=(tipo)?datos.list[i].ascii.data:datos.list[i].mathquill.data
-        for (let j = 0; j < e.length; j++) {
-            let temp1 = e[j];
-            let temp2 = ""+temp1[3];
-            if (temp2.localeCompare("first change") == 0) {
-                let temp3 = Number(temp1[2]);
-                firstChange = temp3;
-            } else if (temp2.localeCompare("submit") == 0) {
-                subvals.push([""+temp1[0],""+temp1[1],""+temp1[2],""+temp1[3]])
-            }
-        }
-        let iPrimerInCorrecto = 0;
-        let flag = true;
-        //obtengo el indice del primer ingreso correcto
-        for (let j = 1; j < subvals.length; j++) {
-            let temp = validacion([String(subvals[j][0]), String(subvals[j][1])] )
-            if (temp[5] == 1 && temp[6] == 1 && flag) {
-                iPrimerInCorrecto = j
-                flag = false
-            }
-        }
-
-        //obtengo el tiempo del ultimo submit con limite < 3 ingresos o el tiempo del primer ingreso correcto
-        let temp1=0;
-        let indice=0;
-        if (iPrimerInCorrecto > 0) temp1 = (subvals[iPrimerInCorrecto][2] as unknown as number)
-        else temp1 = (subvals.length > 3) ? Number(subvals[3][2]) : Number(subvals[(subvals.length-1)][2])
-        let time = temp1 - firstChange;
-        time=Number(time)/1000;
-        time=Number(time.toFixed(2));
-
-        //construyo la fila comprimida
-        indice=(iPrimerInCorrecto>0)?iPrimerInCorrecto:(subvals.length > 3)?3:(subvals.length - 1)
-        let val=validacion([(subvals[indice][0] as unknown as string), (subvals[indice][1] as unknown as string)] )
-        val.push(time)
-        let fila = []
-        for(let j=0;j<val.length;j++)fila.push(""+val[j])
-        tablerow.push(fila)
-    }
-    TransformacionFinalDatos(tablerow,uid,((tipo)?"ASCII":"MQ2"))
-    return tablerow
-}
-const TabladeEvaluacion = ({ datos, refresh, uid}: { datos: tablaEv, refresh: boolean , uid:string}) => {
-    const poblartabla = (tipo:boolean) => {
+const TabladeEvaluacion = ({refresh,tkey}: {refresh: boolean,tkey:string}) => {
+    const poblartabla = (tabla:Array<Array<string>>,tipo:boolean) => {
         return (
-            procesarData(datos,tipo,uid).map((m, i) => (
+            tabla.map((m, i) => (
                 <Tr key={"ASCIIev" + i} >
                     <Td key={i + "ASCIIev" + "m8"} p={"3"}><StaticMath exp={m[7] as string} currentExpIndex={refresh} /></Td>
                     <Td key={i + "ASCIIev" + "m9"} p={"3"}>{(tipo)?m[8]:<StaticMath exp={m[8] as string} currentExpIndex={refresh} />}</Td>
@@ -185,6 +83,29 @@ const TabladeEvaluacion = ({ datos, refresh, uid}: { datos: tablaEv, refresh: bo
             ))
         )
     }
+
+    let value = PValtio.procesedData;
+
+    let t1:Array<Array<string>>=[];
+    let t2:Array<Array<string>>=[];
+
+    let flag=true;
+
+    if (value!=null){
+        if (tkey=="a") {
+            t1=value.a;
+            t2=value.a2;
+        } else if (tkey=="b") {
+            t1=value.b;
+            t2=value.b2;
+        } else if (tkey=="c") {
+            t1=value.c;
+            t2=value.c2;
+        }
+    }else{
+        flag=false;
+    }
+
     return (
         <TableContainer key={"TCTC1"}>
             <Table key={"TCT1"} variant='simple'>
@@ -202,19 +123,38 @@ const TabladeEvaluacion = ({ datos, refresh, uid}: { datos: tablaEv, refresh: bo
                         <Th key={"Th" + 6}>Estricto</Th>
                         <Th key={"Th" + 9}>Tiempo(s)</Th>
                     </Tr>
-                    {poblartabla(true)}
+                    {(flag)?poblartabla(t1,true):(<></>)}
                     <Tr><Td>MQ2</Td></Tr>
-                    {poblartabla(false)}
+                    {(flag)?poblartabla(t2,false):(<></>)}
                 </Thead>
             </Table>
         </TableContainer>
     )
 }
 
-
+const handleBClick= ()=>{
+    if(PValtio.executeOnce){
+        TransformacionFinalDatos(PValtio.procesedData.a,"A395","ASCII");
+        TransformacionFinalDatos(PValtio.procesedData.b,"D400","ASCII");
+        TransformacionFinalDatos(PValtio.procesedData.c,"C402","ASCII");
+        TransformacionFinalDatos(PValtio.procesedData.a2,"A395","MATHQUILL");
+        TransformacionFinalDatos(PValtio.procesedData.b2,"D400","MATHQUILL");
+        TransformacionFinalDatos(PValtio.procesedData.c2,"C402","MATHQUILL");
+        PValtio.executeOnce=false;
+        fetch("http://localhost:3000/api/route", {
+            method: "POST",
+            body: JSON.stringify({ task: PValtio.data }),
+            headers: {
+            "Content-Type": "application/json",
+            },
+        })
+        
+    }
+}
 
 const DepuracionManualDeEvaluacion = () => {
     const [update, setUpdate] = useState(true);
+ 
     return (
         <Center>
             <Tabs variant='soft-rounded' colorScheme='teal' >
@@ -237,16 +177,17 @@ const DepuracionManualDeEvaluacion = () => {
                         <TabladeComparacion1 datos={input3} refresh={update} />
                     </TabPanel>
                     <TabPanel>
-                        <TabladeEvaluacion datos={A395} uid={"A395"} refresh={update} />
+                        <TabladeEvaluacion refresh={update} tkey={"a"}/>
                     </TabPanel>
                     <TabPanel>
-                        <TabladeEvaluacion datos={D400} uid={"D400"} refresh={update} />
+                        <TabladeEvaluacion refresh={update} tkey={"b"}/>
                     </TabPanel>
                     <TabPanel>
-                        <TabladeEvaluacion datos={C402} uid={"C402"}refresh={update} />
+                        <TabladeEvaluacion refresh={update} tkey={"c"}/>
                     </TabPanel>
                 </TabPanels>
             </Tabs>
+            <Button onClick={()=>{handleBClick();}}>Exportar datos</Button>
         </Center>
     )
 }

@@ -9,3 +9,25 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Data {
+  uid String
+  inputtype String
+  expid String
+  parentesis String
+  multiplicacion String
+  suma String
+  resta String
+  sqrt String
+  division String
+  potencia String
+  decimales String
+  opencoded String
+  equals String
+  evaluacionCompletada String
+  ERR String
+  estricto String
+  valencoded String
+  tiempo String
+  @@id([uid,inputtype,expid])
+}
