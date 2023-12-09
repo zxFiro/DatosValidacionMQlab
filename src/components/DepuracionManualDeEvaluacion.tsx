@@ -152,6 +152,92 @@ const handleBClick= ()=>{
     }
 }
 
+interface lab{
+    exp:string,
+    input:boolean
+}
+
+const latinSquareList = () => {
+    let easyL=["1","2","3","4"];
+    let mediumL=["6","7","8","9"];
+    let hardL=["11","12","13","14"];
+    let expAr=[easyL,mediumL,hardL];
+
+    let latinSquareL:Array<Array<lab>> = [];
+    let latex=false;
+
+    for(let i=0; i<3;i++){
+      let tL:Array<string>=expAr[i];
+      if(!tL)continue;
+      for(let j=0;j<2;j++){
+        for(let k=0;k<4;k++){
+          let temp:Array<lab> = [];
+          for(let m=0;m<4;m++){
+            temp.push({"exp":tL[m],"input":latex});
+            latex=latex?false:true;
+          }
+          tL.push(tL.shift() as string);
+          latinSquareL.push(temp);
+          latex=latex?false:true;
+        }
+        latex=latex?false:true;
+      }
+    }
+    return latinSquareL;
+  }
+
+const Orden= ()=>{
+    let lsl:Array<Array<lab>>=latinSquareList();
+    const difin=useRef(-1)
+    let difl=["facil","intermedia","dificil"]
+    return(
+        <TableContainer key={"TCTC1"}>
+            <Table key={"TCT1"} variant='simple' size='sm'>
+                <TableCaption key={"TCC1"}>{"potato to be added"}</TableCaption>
+                <Thead key={"TCH1"}>
+                    <Tr>
+                        <Th key={"Thoga" + 0}></Th>
+                        <Th key={"Thoga" + 1}>Grupo</Th>
+                        <Th key={"Thoga" + 2}>A</Th>
+                        <Th key={"Thogb" + 1}>Grupo</Th>
+                        <Th key={"Thogb" + 2}>B</Th>
+                        <Th key={"Thogc" + 1}>Grupo</Th>
+                        <Th key={"Thogc" + 2}>C</Th>
+                        <Th key={"Thogd" + 1}>Grupo</Th>
+                        <Th key={"Thogd" + 2}>D</Th>
+                    </Tr>
+                    <Tr>
+                        <Th key={"Thoa" + 0}>Dificultad</Th>
+                        <Th key={"Thoa" + 1}>Expresion</Th>
+                        <Th key={"Thoa" + 2}>Input</Th>
+                        <Th key={"Thob" + 1}>Expresion</Th>
+                        <Th key={"Thob" + 2}>Input</Th>
+                        <Th key={"Thoc" + 1}>Expresion</Th>
+                        <Th key={"Thoc" + 2}>Input</Th>
+                        <Th key={"Thod" + 1}>Expresion</Th>
+                        <Th key={"Thod" + 2}>Input</Th>
+                    </Tr>
+                    {lsl.map((m,i)=>(
+                        <Tr>
+                            {
+                                (i<8)?<Th key={i+"Thlsa"+0}>facil</Th>:(i>7 && i<16)?<Th key={i+"Thlsa"+0}>intermedia</Th>:<Th key={i+"Thlsa"+0}>dificil</Th>
+                            }
+                            <Th key={i+"Thlsa"+1}>{m[0].exp}</Th>
+                            <Th key={i+"Thlsa"+2}>{(m[0].input)?"ascii":"mq2"}</Th>
+                            <Th key={i+"Thlsb"+1}>{m[1].exp}</Th>
+                            <Th key={i+"Thlsb"+2}>{(m[1].input)?"ascii":"mq2"}</Th>
+                            <Th key={i+"Thlsc"+1}>{m[2].exp}</Th>
+                            <Th key={i+"Thlsc"+2}>{(m[2].input)?"ascii":"mq2"}</Th>
+                            <Th key={i+"Thlsd"+1}>{m[3].exp}</Th>
+                            <Th key={i+"Thlsd"+2}>{(m[3].input)?"ascii":"mq2"}</Th>
+                        </Tr>
+                    ))}
+                </Thead>
+            </Table>
+        </TableContainer>
+    )
+}
+
 const DepuracionManualDeEvaluacion = () => {
     const [update, setUpdate] = useState(true);
  
@@ -159,6 +245,7 @@ const DepuracionManualDeEvaluacion = () => {
         <Center>
             <Tabs variant='soft-rounded' colorScheme='teal' >
                 <TabList>
+                    <Tab onClick={() => { setUpdate(update ? false : true) }}>Orden de ejercicios</Tab>
                     <Tab onClick={() => { setUpdate(update ? false : true) }}>A395 comparacion</Tab>
                     <Tab onClick={() => { setUpdate(update ? false : true) }}>D400 comparacion</Tab>
                     <Tab onClick={() => { setUpdate(update ? false : true) }}>C402 comparacion</Tab>
@@ -167,6 +254,9 @@ const DepuracionManualDeEvaluacion = () => {
                     <Tab onClick={() => { setUpdate(update ? false : true) }}>C402 evaluacion</Tab>
                 </TabList>
                 <TabPanels>
+                    <TabPanel>
+                        <Orden/>
+                    </TabPanel>
                     <TabPanel>
                         <TabladeComparacion1 datos={input1} refresh={update} />
                     </TabPanel>
